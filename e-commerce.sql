@@ -48,7 +48,7 @@ CREATE TABLE Payments (
     order_id INT NOT NULL,
     amount DECIMAL(10,2) NOT NULL,
     payment_date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    method VARCHAR(50) NOT NULL,
+    method VARCHAR(100) NOT NULL,
 
     CONSTRAINT fk_payment_order
         FOREIGN KEY (order_id) REFERENCES Orders(order_id)
